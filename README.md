@@ -9,7 +9,7 @@ check package.json
 * [webpack](https://webpack.js.org/)
 * [TypeScript](https://typescriptlang.org/)
 
-## Works with
+## Works with and is 100% conventional webpack
 - TypeScript
 - eslint
 - React
@@ -18,6 +18,9 @@ check package.json
 - Jest
 - Tape
 - Express
+- Supports static folder
+- Supports images/fonts
+- Hot Module Reloading (HMR)
 
 ## Install
 >       $ npm install reduce-webpack --save-dev
@@ -26,7 +29,7 @@ check package.json
 ## Setup
 See [examples](./examples)
 
-Your project needs to a `webpack.config.ts` or `webpack.config.js` in your root folder:
+Your project needs to `webpack.config.ts` or `webpack.config.js` in your root folder:
 ```javascript
 import reduceWebpack from 'reduce-webpack';
 
@@ -51,7 +54,7 @@ Then in your package.json, you can add:
 }
 ```
 
-The build step looks for `NODE_ENV` and will run the `production` rules if `NODE_ENV=production`.
+The build step looks for `NODE_ENV` and will run the `production` webpack rules if `NODE_ENV=production`.
 
 ## Dev Server
 Every other `NODE_ENV` not equal to `production` is treated as a `development` build, which spins up a [webpack-hot-middleware](https://github.com/webpack-contrib/webpack-hot-middleware) client.
