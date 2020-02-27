@@ -20,7 +20,7 @@
     "eslint-plugin-promise": "4.0.1",
     "eslint-plugin-react": "7.18.3",
     "eslint-plugin-security": "1.4.0",
-    "reduce-webpack": "^0.0.1",
+    "reduce-webpack": "0.2.0",
     "ts-node": "8.6.2",
     "typescript": "3.8.2",
     "webpack": "4.41.6",
