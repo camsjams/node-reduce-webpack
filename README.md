@@ -29,7 +29,7 @@ check package.json
 ## Setup
 See [examples](./examples)
 
-Your project needs to `webpack.config.ts` or `webpack.config.js` in your root folder:
+Your project needs a `webpack.config.ts` (must install `ts-node`) or `webpack.config.js` in your root folder:
 ```javascript
 import reduceWebpack from 'reduce-webpack';
 
@@ -49,8 +49,8 @@ Then in your package.json, you can add:
 ```JSON
 {
 	"scripts": {
-    	"build": "webpack"
-  	},
+		"build": "webpack"
+	}
 }
 ```
 
