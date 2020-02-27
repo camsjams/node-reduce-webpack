@@ -1,6 +1,6 @@
 {
   "name": "reduce-webpack",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Provide a zero-config webpack experience for common app setups",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -16,7 +16,13 @@
     "url": "git+https://github.com/camsjams/node-reduce-webpack.git"
   },
   "keywords": [
-    "webpack zero config"
+    "webpack",
+    "zero config",
+    "typescript",
+    "react",
+    "styled-components",
+    "dev-server",
+    "hmr"
   ],
   "author": "Cameron Manavian",
   "license": "MIT",

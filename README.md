@@ -1,8 +1,9 @@
 # reduce-webpack
-Provide a list zero-config webpack experience for common app setups
+Provide a zero-config webpack experience for common app setups
 
 ## Current Version
-check package.json
+v1.0.1
+[![npm version](https://badge.fury.io/js/typescript.svg)](https://www.npmjs.com/package/reduce-webpack)
 
 ## Platforms / Technologies
 * [nodejs](https://nodejs.org/)
