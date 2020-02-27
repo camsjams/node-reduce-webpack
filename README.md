@@ -9,7 +9,7 @@ check package.json
 * [webpack](https://webpack.js.org/)
 * [TypeScript](https://typescriptlang.org/)
 
-## Works with and is 100% conventional webpack
+## Works with everything* / 100% conventional webpack
 - Blazing Fast 🚀
 - Zero config 📄
 - TypeScript 💜
