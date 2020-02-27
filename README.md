@@ -10,17 +10,20 @@ check package.json
 * [TypeScript](https://typescriptlang.org/)
 
 ## Works with and is 100% conventional webpack
-- TypeScript
-- eslint
-- React
-- Styled Components
-- FP-TS
-- Jest
-- Tape
-- Express
-- Supports static folder
-- Supports images/fonts
-- Hot Module Reloading (HMR)
+- Blazing Fast 🚀
+- Zero config 📄
+- TypeScript 💜
+- eslint 🤝
+- React ⚛️
+- Styled Components 💼⚛️
+- FP-TS 💼
+- Jest 🃏
+- Tape 💼
+- Express 💼
+- Simple HTML file file templates using [lodash templates](https://lodash.com/docs#template) - see (HtmlWebpackPlugin)[https://webpack.js.org/plugins/html-webpack-plugin/]
+- Supports static folder 🎓
+- Supports images/fonts 📦
+- Hot Module Reloading (HMR) ⚡
 
 ## Install
 >       $ npm install reduce-webpack --save-dev
@@ -55,6 +58,8 @@ Then in your package.json, you can add:
 ```
 
 The build step looks for `NODE_ENV` and will run the `production` webpack rules if `NODE_ENV=production`.
+
+A folder called `dist` will be created, with a subfolder called `public`, which is the root directory to be hosted by your static file server or Express app.
 
 ## Dev Server
 Every other `NODE_ENV` not equal to `production` is treated as a `development` build, which spins up a [webpack-hot-middleware](https://github.com/webpack-contrib/webpack-hot-middleware) client.
