@@ -2,8 +2,7 @@
 Provide a zero-config webpack experience for common app setups
 
 ## Current Version
-v1.0.1
-[![npm version](https://badge.fury.io/js/typescript.svg)](https://www.npmjs.com/package/reduce-webpack)
+v1.0.2
 
 ## Platforms / Technologies
 * [nodejs](https://nodejs.org/)

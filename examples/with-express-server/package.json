@@ -1,6 +1,6 @@
 {
   "name": "reduce-webpack-example",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Simple reduce-webpack React app",
   "scripts": {
     "build": "NODE_ENV=production webpack"
