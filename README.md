@@ -20,7 +20,7 @@ check package.json
 - Jest 🃏
 - Tape 💼
 - Express 💼
-- Simple HTML file file templates using [lodash templates](https://lodash.com/docs#template) - see (HtmlWebpackPlugin)[https://webpack.js.org/plugins/html-webpack-plugin/]
+- Simple HTML file file templates using [lodash templates](https://lodash.com/docs#template) - see [HtmlWebpackPlugin](https://webpack.js.org/plugins/html-webpack-plugin/)
 - Supports static folder 🎓
 - Supports images/fonts 📦
 - Hot Module Reloading (HMR) ⚡
