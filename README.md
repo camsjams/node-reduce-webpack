@@ -15,7 +15,7 @@ check package.json
 - TypeScript 💜
 - eslint 🤝
 - React ⚛️
-- Styled Components 💼⚛️
+- Styled Components :nail_care:
 - FP-TS 💼
 - Jest 🃏
 - Tape 💼
