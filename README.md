@@ -9,6 +9,16 @@ check package.json
 * [webpack](https://webpack.js.org/)
 * [TypeScript](https://typescriptlang.org/)
 
+## Works with
+- TypeScript
+- eslint
+- React
+- Styled Components
+- FP-TS
+- Jest
+- Tape
+- Express
+
 ## Install
 >       $ npm install reduce-webpack --save-dev
 
