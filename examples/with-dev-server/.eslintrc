@@ -51,7 +51,8 @@
   },
   "globals": {
     "ga": true,
-    "fetch": true
+    "fetch": true,
+    "__SOME_VAR__": true
   },
   "rules": {
     "block-scoped-var": 2,
