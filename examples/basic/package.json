@@ -1,0 +1,28 @@
+{
+  "name": "reduce-webpack-example",
+  "version": "1.0.2",
+  "description": "Simple reduce-webpack React app",
+  "scripts": {
+    "build": "NODE_ENV=production webpack"
+  },
+  "dependencies": {
+    "react": "16.12.0",
+    "react-dom": "16.12.0",
+    "styled-components": "5.0.1"
+  },
+  "devDependencies": {
+    "@types/node": "12.7.8",
+    "@types/react": "16.9.19",
+    "@types/react-dom": "16.9.5",
+    "@types/styled-components": "5.0.1",
+    "eslint": "6.4.0",
+    "eslint-plugin-import": "2.14.0",
+    "eslint-plugin-promise": "4.0.1",
+    "eslint-plugin-react": "7.18.3",
+    "eslint-plugin-security": "1.4.0",
+    "reduce-webpack": "1.0.0",
+    "ts-node": "8.6.2",
+    "typescript": "3.8.2",
+    "webpack": "4.41.6"
+  }
+}
