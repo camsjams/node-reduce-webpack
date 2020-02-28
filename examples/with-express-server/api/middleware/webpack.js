@@ -1,16 +1,20 @@
-import devMiddleware from 'webpack-dev-middleware';
-import hotMiddleware from 'webpack-hot-middleware';
-import webpack from 'webpack';
-
-import config from '../../webpack.config';
+const devMiddleware = require('webpack-dev-middleware');
+const hotMiddleware = require('webpack-hot-middleware');
+const webpack = require('webpack');
+const config = require('../../webpack.config');
 
 const compiler = webpack(config);
 
-export const webpackDevMiddleware = devMiddleware(compiler, {
+const webpackDevMiddleware = devMiddleware(compiler, {
 	watchOptions: {
 		poll: false
 	},
 	stats: 'minimal'
 });
 
-export const webpackHotMiddleware = hotMiddleware(compiler);
+const webpackHotMiddleware = hotMiddleware(compiler);
+
+module.exports = {
+	webpackDevMiddleware,
+	webpackHotMiddleware
+}
