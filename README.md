@@ -1,8 +1,17 @@
 # reduce-webpack
 Provide a zero-config webpack experience for common app setups
 
+# Who is this for?
+Those who:
+- Are tired of copying over webpack configs to other projects
+- Don't enjoy fiddling with / installing npm modules for webpack
+- Use standard webpack practices
+- Want a conventional config for webpack as a plain object, that's extensible to fit any project
+- Like smart defaults
+- Prefer less npm dependencies
+
 ## Current Version
-v1.0.2
+v1.0.3
 
 ## Platforms / Technologies
 * [nodejs](https://nodejs.org/)
@@ -13,14 +22,14 @@ v1.0.2
 - Blazing Fast 🚀
 - Zero config 📄
 - TypeScript 💜
-- eslint 🤝
+- ESLint 🤝
 - React ⚛️
 - Styled Components :nail_care:
-- FP-TS 💼
+- FP-TS ➕
 - Jest 🃏
-- Tape 💼
-- Express 💼
-- Simple HTML file file templates using [lodash templates](https://lodash.com/docs#template) - see [HtmlWebpackPlugin](https://webpack.js.org/plugins/html-webpack-plugin/)
+- Tape 🖭
+- Express 🌠
+- Simple HTML file file templates 😀 (using [lodash templates](https://lodash.com/docs#template) - see [HtmlWebpackPlugin](https://webpack.js.org/plugins/html-webpack-plugin/))
 - Supports static folder 🎓
 - Supports images/fonts 📦
 - Hot Module Reloading (HMR) ⚡
@@ -28,11 +37,47 @@ v1.0.2
 ## Install
 >       $ npm install reduce-webpack --save-dev
 
+---
 
-## Setup
-See [examples](./examples)
+## Setup and Usage
+For quick project templates, see [examples](./examples)
 
+
+### Basic
 Your project needs a `webpack.config.ts` (must install `ts-node`) or `webpack.config.js` in your root folder:
+```javascript
+import reduceWebpack from 'reduce-webpack';
+
+export default reduceWebpack({},'someVersionNumberYouWantToShowInHTML',__dirname);
+```
+
+Then in your package.json, you can add:
+```JSON
+{
+	"scripts": {
+		"build": "webpack"
+	}
+}
+```
+
+### Customizing
+Your can use the resulting config and customize any aspect of it as needed:
+```javascript
+import reduceWebpack from 'reduce-webpack';
+
+const baseConfig = reduceWebpack({},'someVersionNumberYouWantToShowInHTML',__dirname);
+
+// here we might want to customize the config to support more file extensions
+export default {
+	...baseConfig,
+	resolve: {
+		extensions: ['.json', '.js', '.ts', '.tsx', '.jsx', '.wasm', '.mjs']
+	}
+};
+```
+
+### Definitions
+You can optionally add definitions that will be sent to  the webpack [DefinePlugin](https://webpack.js.org/plugins/define-plugin/)
 ```javascript
 import reduceWebpack from 'reduce-webpack';
 
@@ -48,71 +93,22 @@ export default reduceWebpack(
 );
 ```
 
-Then in your package.json, you can add:
-```JSON
-{
-	"scripts": {
-		"build": "webpack"
-	}
-}
-```
+### Production Build
 
 The build step looks for `NODE_ENV` and will run the `production` webpack rules if `NODE_ENV=production`.
 
-A folder called `dist` will be created, with a subfolder called `public`, which is the root directory to be hosted by your static file server or Express app.
+A folder called `dist` will be created, with a subfolder called `public`, which is the root directory to be hosted by your static file server, GitHub page or Express app.
+```bash
+[your project]/dist/public/index.html <--- serve this file
+```
+
+---
 
 ## Dev Server
 Every other `NODE_ENV` not equal to `production` is treated as a `development` build, which spins up a [webpack-hot-middleware](https://github.com/webpack-contrib/webpack-hot-middleware) client.
 
-This client can easily be attached to your existing server with Express middleware like so:
-```javascript
-import webpack from 'webpack';
-import devMiddleware from 'webpack-dev-middleware';
-import hotMiddleware from 'webpack-hot-middleware';
+### With an Express server
+This client can easily be attached to your existing server with Express middleware, see [examples/with-express-server](./examples/with-express-server).
 
-// your webpack config as created above
-import config from './webpack.config';
-
-const compiler = webpack(config);
-
-export const webpackDevMiddleware = devMiddleware(compiler, {
-	publicPath: '/',
-	watchOptions: {
-		poll: false
-	},
-	stats: 'minimal'
-});
-
-export const webpackHotMiddleware = hotMiddleware(compiler);
-
-const app = express();
-app.use(webpackDevMiddleware);
-app.use(webpackHotMiddleware);
-```
-
-If you instead wanted to just use the [webpack-dev-server](), use:
-```javascript
-import {join} from 'path';
-import {Configuration} from 'webpack';
-import reduceWebpack from 'reduce-webpack';
-import {Configuration as DevServerConfig} from 'webpack-dev-server';
-
-const config: Configuration = reduceWebpack(
-	{__SOME_VAR__: JSON.stringify('World!!')},
-	'someVersion',
-	__dirname
-);
-
-if (process.env.NODE_ENV !== 'production') {
-	config.devServer = ((): DevServerConfig => ({
-		contentBase: join(__dirname, 'dist'),
-		host: '0.0.0.0',
-		port: 8118,
-		hotOnly: true,
-		inline: true,
-		publicPath: '/'
-	}))()
-}
-
-export default config
-```
+### As a standalone SPA app
+If you instead wanted to just use the [webpack-dev-server](), see [examples/with-dev-server](./examples/with-dev-server).

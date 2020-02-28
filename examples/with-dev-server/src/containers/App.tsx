@@ -8,6 +8,6 @@ const Wrapper = styled.div`
 `;
 
 const App: FC = () =>
-	<Wrapper>Hello Reducers! Welcome to our Express dev server {__SOME_VAR__}</Wrapper>;
+	<Wrapper>Hello Reducers! Welcome to our Dev Server</Wrapper>;
 
 export default App;
