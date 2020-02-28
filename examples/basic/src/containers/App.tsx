@@ -5,6 +5,7 @@ const Wrapper = styled.div`
 	margin-top: 2.3em;
 	text-align: right;
 	padding-bottom: 1em;
+	background-color: #ccc;
 `;
 
 const App: FC = () =>
