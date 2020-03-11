@@ -31,6 +31,10 @@ const commonConfig: WebpackConfig = {
 				use: 'ts-loader'
 			},
 			{
+				test: /\.css$/,
+				use: ['style-loader', 'css-loader']
+			},
+			{
 				test: /\.(eot|svg|ttf|otf|woff|woff2)$/,
 				use: 'file-loader?name=[name].[ext]'
 			},

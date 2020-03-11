@@ -1,5 +1,6 @@
 import React, {FC} from 'react';
 import styled from 'styled-components';
+import '../assets/global.css';
 
 const Wrapper = styled.div`
 	margin-top: 2.3em;
