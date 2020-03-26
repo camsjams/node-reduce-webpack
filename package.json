@@ -1,6 +1,6 @@
 {
   "name": "reduce-webpack",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Provide a zero-config webpack experience for common app setups",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
