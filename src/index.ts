@@ -53,7 +53,7 @@ const commonConfig: WebpackConfig = {
 		]
 	},
 	resolve: {
-		extensions: ['.json', '.js', ',jsx', '.ts', '.tsx']
+		extensions: ['.json', '.js', '.jsx', '.ts', '.tsx']
 	}
 };
 
