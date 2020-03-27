@@ -71,7 +71,7 @@ export default (definitions = {}, buildVersion: string, directory: string): Webp
 			version: buildVersion
 		}),
 		new CopyWebpackPlugin([
-			{from: './src/static/*', to: '', flatten: true}
+			{from: './src/static', to: ''}
 		]),
 		new HardSourceWebpackPlugin()
 	];
