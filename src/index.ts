@@ -28,7 +28,14 @@ const commonConfig: WebpackConfig = {
 			{
 				test: /\.tsx?$/,
 				exclude: /node_modules/,
-				use: 'ts-loader'
+				use: [
+					{
+						loader: 'ts-loader',
+						options: {
+							onlyCompileBundledFiles: true
+						}
+					}
+				]
 			},
 			{
 				test: /\.css$/,
