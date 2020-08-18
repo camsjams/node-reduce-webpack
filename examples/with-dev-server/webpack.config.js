@@ -20,4 +20,7 @@ if (process.env.NODE_ENV !== 'production') {
 	}))()
 }
 
+
+config.entry.app = ['./src/index.tsx'];
+
 module.exports = config;
